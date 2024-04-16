@@ -1,10 +1,40 @@
 from pypdf import PdfReader
 from docx import Document
+from docx.shared import Pt
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 import docx2txt
+import os
+
+
+def createDocument(quiz_data, question_bank = False):
+    if os.path.exists("storage/output.docx"):
+        os.remove("storage/output.docx")
+    if os.path.exists("storage/output.pdf"):
+        os.remove("storage/output.pdf")
+    doc = Document()
+    title = doc.add_heading('Quiz', 1) 
+    title.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    doc.add_paragraph("\n\n")
+    doc.add_heading("Questions : ", 2)
+    for qno, q in enumerate(quiz_data):
+        qno += 1
+        para = doc.add_paragraph()
+        para.add_run(f"{qno}) {q["question"]}\n").bold = True
+        for choice, op in zip(q["options"], "abcd"):
+            para.add_run(f"({op}) {choice}\n")
+        if question_bank:
+            para.add_run("Correct Answer : ").bold = True
+            para.add_run(q["answer"]+"\n")
+            para.add_run("Explanation : \n").bold = True
+            para.add_run(q["reason"]+"\n")
+        para.add_run("\n")
+    img = doc.add_picture('assets/watermark.png', width=Pt(150))
+    img.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    doc.save("storage/output.docx")
 
 class ExtractContent:
-    def __init__(self, file_type, file_path=None):
-        self.__file_type = file_type
+    def __init__(self,file_path, file_type=None):
+        self.__file_type = file_path.split(".")[-1]
         self.__file_path = file_path
         self.__words = 0
         self.__content = ""
@@ -57,19 +87,3 @@ class ExtractContent:
     
     def getContent(self):
         return self.__content
-    
-
-if __name__ == "__main__":
-    a = ExtractContent("docx",r"C:\D\B Tech AIE\Semester 4\Mathematics for Computing 4 22MAT230\Assignment\End Semester Project\Project\DocxTest.docx")
-    print(a.getInformation())
-    print(a.getContent())
-
-"""
-def get_pdf_text(pdf_docs):
-text = ""
-for pdf in pdf_docs:
-    pdf_reader = PdfReader(pdf)
-    for page in pdf_reader.pages:
-        text += page.extract_text()
-return text
-"""

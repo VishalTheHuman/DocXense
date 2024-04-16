@@ -4,7 +4,7 @@ HOME_MARKDOWN = """
 
         1. **:orange[Question answering with RAG confidence indicators:]** Users upload PDFs, ask questions, and receive responses with confidence ratings, enabling them to gauge the reliability of the answers. 
 
-        2. **:orange[Topic-based scoring:]** The system analyzes PDFs across various topics, generating questions and assigning scores to each topic for relevance and depth. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, AskYourDocx computes a personalized score for each user, reflecting their comprehension and engagement.
+        2. **:orange[Topic-based scoring:]** The system analyzes PDFs across various topics, generating questions and assigning scores to each topic. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, AskYourDocx computes a personalized score for each user, reflecting their comprehension and engagement.
 
         With an intuitive interface and a focus on accuracy and efficiency, DocXense provides valuable insights from uploaded documents, catering to diverse user needs.
 
@@ -17,3 +17,5 @@ HOME_MARKDOWN = """
             - **:blue[Ask Questions : ]** Type your questions after the document has processed.
             - **:blue[Test Yourself : ]** Answer provided questions; the platform will score each topic.
         """
+        
+TEST_YOURSELF_MARKDOWN = "## ```Description 📝 :```\nThe system analyzes PDFs across various topics, generating questions and assigning scores to each topic. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, AskYourDocx computes a personalized score for each user, reflecting their comprehension and engagement."
