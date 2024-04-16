@@ -59,7 +59,7 @@ def generateQuestions(chunks):
     """
     
     qa_prompt = PromptTemplate(input_variables=["context", "classes"], template = TEMPLATE)
-    llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.3, api_key="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")
+    llm = ChatOpenAI(model="gpt-3.5-turbo-0125", temperature=0.3, api_key="YOUR_API_KEY")
     llm_chain = LLMChain(llm=llm, prompt = qa_prompt)
     QA_DATA = []
     classes = []
