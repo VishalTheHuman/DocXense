@@ -18,4 +18,4 @@ HOME_MARKDOWN = """
             - **:blue[Test Yourself : ]** Answer provided questions; the platform will score each topic.
         """
         
-TEST_YOURSELF_MARKDOWN = "## ```Description 📝 :```\nThe system analyzes PDFs across various topics, generating questions and assigning scores to each topic. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, AskYourDocx computes a personalized score for each user, reflecting their comprehension and engagement."
+TEST_YOURSELF_MARKDOWN = "## ```Description 📝 :```\nThe system analyzes PDFs across various topics, generating questions and assigning scores to each topic. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, DocXense computes a personalized score for each user, reflecting their comprehension and engagement."

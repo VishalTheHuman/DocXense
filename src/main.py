@@ -1,6 +1,12 @@
-from markdowns import *
-from process import *
-from extractcontent import ExtractContent, createDocument
+from markdowns import HOME_MARKDOWN, TEST_YOURSELF_MARKDOWN
+from process import (
+    createConversationChain, 
+    getVectorStore, 
+    getChunks, 
+    generateQuestions, 
+    
+)
+from filemanagement import ExtractContent, createDocument
 from collections import defaultdict 
 import streamlit as st
 import time
@@ -115,7 +121,7 @@ def main():
                     session_state.count = getCount()
                 if "count" not in st.session_state:
                     st.session_state.count = 0
-                if not st.session_state.quiz_data:
+                if "quiz_data" not in st.session_state:
                     st.session_state.quiz_data = getQuestion()
                     st.session_state.count = getCount()
                 
@@ -152,12 +158,11 @@ def main():
                     else:
                         createDocument(st.session_state.questions, question_bank=True)
                         st.write("Don't Click on Next Question. It will cause error since no more questions are left.")
-                        # Printing the results
                         st.markdown("## **```::::::::Results::::::::```**")
                         for k,v in st.session_state.results.items():
                             total = v["correct"] + v["wrong"]
                             st.markdown(f"🟠 :blue[{k}] : {(v["correct"]/total)*100} %")
-            st.markdown("## **```Download Zone 📝```**")
+            st.markdown("## **```Download Zone 📩```**")
             st.session_state.file_format = st.selectbox(
                 "Choose Type", 
                 ("Quiz", "Question Bank")
