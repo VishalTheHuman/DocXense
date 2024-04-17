@@ -160,7 +160,7 @@ def main():
                         st.write("Don't Click on Next Question. It will cause error since no more questions are left.")
                         st.markdown("## **```::::::::Results::::::::```**")
                         for k,v in st.session_state.results.items():
-                            total = v["correct"] + v["wrong"]
+                            total = v.get("correct",0) + v.get("wrong", 0)
                             st.markdown(f"🟠 :blue[{k}] : {(v["correct"]/total)*100} %")
             st.markdown("## **```Download Zone 📩```**")
             st.session_state.file_format = st.selectbox(
