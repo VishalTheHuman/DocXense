@@ -35,3 +35,11 @@ pip install -r requirements.txt
 ```shell
 streamlit run src/main.py
 ```
+
+## ```Screenshots 💻 :```
+![image](https://github.com/VishalTheHuman/DocXense/assets/117697246/6a3b3a1b-e468-450e-97ba-f1df4ccfa6de)
+![image](https://github.com/VishalTheHuman/DocXense/assets/117697246/2133f3e1-cf36-40e2-a78a-8255f91fb7c7)
+![image](https://github.com/VishalTheHuman/DocXense/assets/117697246/bd51f48c-5434-4d59-8ad1-3247adfdddf5)
+![image](https://github.com/VishalTheHuman/DocXense/assets/117697246/faad01e5-4ac3-4ec0-8de7-d43b608642c3)
+![image](https://github.com/VishalTheHuman/DocXense/assets/117697246/b7dccdd4-c42c-4807-9684-aea32c0be588)
+
