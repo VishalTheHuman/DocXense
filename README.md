@@ -1,6 +1,6 @@
 # DocXense
 
-![banner](https://github.com/VishalTheHuman/DocXense/assets/117697246/b3e568b6-3f2d-4e07-968a-3216bdd53d49)
+![banner](https://github.com/VishalTheHuman/DocXense/assets/117697246/8916e1ee-835d-45d2-bbaa-69b067d17e96)
 
 ## ```Description 📝 :``` 
 <b><span style="color:blue;">Doc</span><span style="color:orange;">X</span><span style="color:red;">ense</span></b>
