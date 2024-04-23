@@ -1,4 +1,4 @@
-# DocXense
+# DocXense : AI Study Helper
 
 ![banner](https://github.com/VishalTheHuman/DocXense/assets/117697246/8916e1ee-835d-45d2-bbaa-69b067d17e96)
 
