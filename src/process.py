@@ -13,7 +13,7 @@ import json
 
 def createConversationChain(vectordb):
     load_dotenv()
-    repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
+    repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     llm = HuggingFaceEndpoint(
         repo_id = repo_id, 
         max_length = 128, 
