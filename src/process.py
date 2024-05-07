@@ -13,7 +13,7 @@ import json
 
 def createConversationChain(vectordb):
     load_dotenv()
-    repo_id = "mistralai/Mistral-7B-Instruct-v0.2"
+    repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
     llm = HuggingFaceEndpoint(
         repo_id = repo_id, 
         max_length = 128, 
@@ -27,6 +27,7 @@ def createConversationChain(vectordb):
     IMPORTANT : 
         -> Keep it concise and straightforward.
         -> Output shouldn't exceed more than 100 words.
+        -> If you don't have the answer in context, say 'Information Not Available'. 
     
     Question: {question}\n\n
     Context : {context}\n\n
