@@ -93,6 +93,17 @@ def main():
                 st.session_state.memory = []
 
             HOME, ASK, TEST = st.tabs(["**Home🏡**", "**Ask It 🤔**", "**Test Yourself 🤓**"])
+            font_css = """
+            <style>
+            button[data-baseweb="tab"] {
+            margin: 0;
+            width: 100%;
+
+            }
+            </style>
+            """
+
+            st.write(font_css, unsafe_allow_html=True)
 
             with HOME:
                 st.markdown(HOME_MARKDOWN, unsafe_allow_html=False)
