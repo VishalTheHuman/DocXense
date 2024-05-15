@@ -1,6 +1,6 @@
 # DocXense : AI Study Helper
 
-![banner](https://github.com/VishalTheHuman/DocXense/assets/117697246/8916e1ee-835d-45d2-bbaa-69b067d17e96)
+![banner](assets/banner.png)
 
 ## ```Description 📝 :``` 
 <b><span style="color:blue;">Doc</span><span style="color:orange;">X</span><span style="color:red;">ense</span></b>
@@ -11,6 +11,10 @@ is a versatile document analysis tool powered by advanced natural language proce
 2.  <b><span style="color:orange;">Topic-based scoring:</span></b> The system analyzes PDFs across various topics, generating questions and assigning scores to each topic. Users engage with the system by providing answers to questions or prompts. The system dynamically evaluates user responses, considering factors such as relevance, depth, and accuracy. Based on the analysis of user input, DocXense computes a personalized score for each user, reflecting their comprehension and engagement.
 
 With an intuitive interface and a focus on accuracy and efficiency, DocXense provides valuable insights from uploaded documents, catering to diverse user needs.
+
+## ```Workflow Diagram 🌿 :```
+
+![workflow_diagram](assets/workflow.png)
 
 ## ```How to Use 😅 :```
 
